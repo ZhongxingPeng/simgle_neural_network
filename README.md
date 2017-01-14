@@ -9,7 +9,8 @@ cd simple_neural_network.git
 python simple_neural_network.py
 ```
 
-If we set the initial values of the parameters to be
+## Set initial values
+Modify the following variables in `simple_neural_network.py` to set the initial values for parameters
 
 ```python
 self.lamb = 1.21463071343
@@ -17,7 +18,7 @@ self.bias = 0.971014765329
 self.weight = 0.13225856384
 ```
 
-we will get a possible output as follows
+which in turn will result in a following  possible output:
 
 ```bash
 Epoch 0: lambda = 1.21465776706, bias = 0.971614493789, weight = 0.133034781136
@@ -31,8 +32,8 @@ Loss: 6.04801669517e-05
 Training Accu = 1.0, Test Accu = 1.0
 ```
 
-## Search parameters for network
-You can use following code to search a better sets of parameters for the neural network. The new parameters will be appended to a file named `save_file.txt` in the current directory.
+## Search parameters for our network
+Run `search_param.py` to search for better parameters. The new parameters will be appended to a file named `save_file.txt` in the current directory.
 
 ```bash
 python search_param.py
