@@ -1,8 +1,11 @@
 This is a repository to implement a simple neural network by using gradient descent and back-propagation.
 
 ## Run the code
+To training our simple neural network, please following the instructions below
 
 ```bash
+git clone https://github.com/ZhongxingPeng/simple_neural_network.git
+cd simple_neural_network.git
 python simple_neural_network.py
 ```
 
