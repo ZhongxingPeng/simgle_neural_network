@@ -22,14 +22,14 @@ class SimpleNeuralNetwork(object):
 
 
     def loss_fun(self, training_data):
-        """Return the value of loss function"""
+        """Compute the value of loss function"""
 
         loss = 0.0
         for coordinate_x, coordinate_y, label in training_data:
             weighted_z = coordinate_y - self.lamb * math.pow((self.weight * coordinate_x + \
                 self.bias), 2)
-            loss = loss - label * np.log(sigmoid(weighted_z)) - (1-label) * \
-                np.log(1 - sigmoid(weighted_z)) # pylint: disable=no-member
+            z_sig = sigmoid(weighted_z)
+            loss = loss - label * np.log(z_sig) - (1-label) * np.log(1 - z_sig) # pylint: disable=no-member
         return loss
 
 
@@ -100,12 +100,12 @@ class SimpleNeuralNetwork(object):
 
 def sigmoid(weighted_z):
     """Sigmoid function"""
-    return 1.0/(1.0+np.exp(-weighted_z)) # pylint: disable=no-member
+    return 1.0 / (1.0 + np.exp(- weighted_z)) # pylint: disable=no-member
 
 
 if __name__ == '__main__':
 
-    ITERATIONS = 2000000 # Number of iterations for gradient descent
+    ITERATIONS = 1500000 # Number of iterations for gradient descent
     LEARNING_RATE = 0.001 # Learning rate of gradient descent
 
     # Training data: in each element, [coordinate x, coordinate y, label]
