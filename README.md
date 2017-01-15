@@ -1,6 +1,6 @@
 This is a repository to implement a simple neural network by using gradient descent and back-propagation.
 
-<img src="./images/simple_neural_network.png" align="middle">
+<img src="./images/simple_neural_network.png">
 
 ## Run the code
 To training our simple neural network, please following the instructions below
