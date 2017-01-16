@@ -2,7 +2,7 @@ This is a repository to implement a simple neural network by using gradient desc
 
 <img src="./images/simple_neural_network.png">
 
-## Run the code
+## Training the network
 To training our simple neural network, please following the instructions below
 
 ```bash
